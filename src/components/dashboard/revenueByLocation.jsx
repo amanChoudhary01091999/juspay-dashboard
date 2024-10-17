@@ -19,7 +19,7 @@ const RevenueByLocation = () => {
                 padding: '10px',
                 borderRadius: '10px',
                 backgroundColor: isDarkMode ? '#1e1e1e' : '#F1F3F4', // Black background for dark mode
-                height: '330px',  // Fixed height
+                height: '460px',  // Fixed height
                 display: 'flex',
                 flexDirection: 'column',
             }}

@@ -16,7 +16,7 @@ const ProjectionsCard = () => {
     const isDarkMode = theme.palette.mode === 'dark'; // Check if the theme is dark
 
     return (
-        <Grid container spacing={2} display={'flex'} justifyContent={'flex-start'}>
+        <Grid container spacing={2} display={'flex'} justifyContent={'flex-start'} >
             {/* Projections vs Actuals Card */}
             <Grid item xs={12} md={12}>
                 <Card

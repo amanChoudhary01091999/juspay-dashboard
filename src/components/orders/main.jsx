@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
-import { Box, TextField, IconButton, Avatar, Chip, Pagination, useTheme } from '@mui/material';
+import { Box, TextField, IconButton, Avatar, Chip, Pagination, useTheme, Typography } from '@mui/material';
 import { Add, FilterList, SwapVert } from '@mui/icons-material';
 
 const Order = () => {
@@ -143,9 +143,20 @@ const Order = () => {
     `;
 
     return (
-        <Box sx={{ height: '100%', width: '100%', bgcolor: isDarkTheme ? '#1e1e1e' : '#ffffff' }}>
+        <Box sx={{ height: '100%', width: '100%', bgcolor: isDarkTheme ? '#141212' : '#ffffff', padding: '20px' }}>
+            <Typography style={{ fontSize: '20px', fontWeight: 'bold', margin: 'auto', paddingBottom: '10px' }}>Order List</Typography>
             <style>{customGridStyles}</style>
-            <Box sx={{ p: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <Box
+                sx={{
+                    p: 1,
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    bgcolor: isDarkTheme ? '#1e1e1e' : '#f5f5f5',  // Background color based on theme
+                    borderRadius: '8px',                       // Apply border radius to the entire container
+                    boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.1)',  // Optional: adds a subtle shadow
+                }}
+            >
                 <Box>
                     <IconButton size="small" sx={{ mr: 1, color: isDarkTheme ? '#ffffff' : 'inherit' }}>
                         <Add />
@@ -163,8 +174,8 @@ const Order = () => {
                     placeholder="Search"
                     InputProps={{
                         sx: {
-                            bgcolor: isDarkTheme ? '#333' : '#f5f5f5',
-                            borderRadius: '4px',
+                            bgcolor: isDarkTheme ? '#333' : '#f5f5f5',  // Background for the TextField
+                            borderRadius: '4px',                        // Border radius for the input field
                             color: isDarkTheme ? '#ffffff' : 'inherit',
                             '& .MuiOutlinedInput-notchedOutline': {
                                 borderColor: isDarkTheme ? '#4a4a4a' : 'rgba(0, 0, 0, 0.23)',
@@ -179,12 +190,15 @@ const Order = () => {
                     }}
                 />
             </Box>
+
             <div
                 className={gridTheme}
                 style={{
                     height: 'calc(100% - 64px)',
                     width: '100%',
+                    marginTop: "20px"
                 }}
+
             >
                 <AgGridReact
                     columnDefs={columnDefs}

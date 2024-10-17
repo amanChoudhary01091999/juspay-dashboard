@@ -45,6 +45,9 @@ const activities = [
     { avatar: 'https://randomuser.me/api/portraits/women/4.jpg', message: 'Modified A data in Page X', time: 'Today, 11:59 AM' },
     { avatar: 'https://randomuser.me/api/portraits/men/5.jpg', message: 'Commented on your issue', time: 'Yesterday, 6:45 PM' },
     { avatar: 'https://randomuser.me/api/portraits/women/6.jpg', message: 'Assigned a new task', time: '2 days ago' },
+    { avatar: 'https://randomuser.me/api/portraits/women/20.jpg', message: 'Updated status for a bug', time: '1 days ago' },
+    { avatar: 'https://randomuser.me/api/portraits/men/15.jpg', message: 'Assigned a new bug', time: '3 days ago' },
+    { avatar: 'https://randomuser.me/api/portraits/women/16.jpg', message: 'Marked bug as deferred', time: '5 days ago' },
 ];
 
 
@@ -65,9 +68,19 @@ const people = [
 
 const NotificationItem = ({ icon, message, time, bgcolor }) => (
     <ListItem>
-        <ListItemIcon sx={{ minWidth: 30, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <Box sx={{ bgcolor: bgcolor, borderRadius: '50%', width: '24px', height: '24px' }}>
-                {icon}
+        <ListItemIcon sx={{ minWidth: 30, display: 'flex' }}>
+            <Box
+                sx={{
+                    bgcolor: bgcolor,
+                    borderRadius: '50%',
+                    width: '20px',      // Reduced size
+                    height: '20px',     // Reduced size
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center'
+                }}
+            >
+                {React.cloneElement(icon, { sx: { fontSize: 16 } })} {/* Set icon size */}
             </Box>
         </ListItemIcon>
         <ListItemText
@@ -84,6 +97,7 @@ const NotificationItem = ({ icon, message, time, bgcolor }) => (
         />
     </ListItem>
 );
+
 
 
 const ActivityItem = ({ avatar, message, time }) => (
@@ -123,7 +137,7 @@ const People = ({ avatar, name }) => (
 
 export default function RightPanel() {
     return (
-        <Container maxWidth={false} disableGutters>
+        <Container maxWidth={false} disableGutters style={{ height: '100vh' }}>
             <Box sx={{ width: '100%', bgcolor: 'background.paper', boxShadow: 1, overflow: 'hidden' }}>
                 <Box sx={{ p: 2 }}>
                     <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', fontSize: '16px' }}>Notifications</Typography>

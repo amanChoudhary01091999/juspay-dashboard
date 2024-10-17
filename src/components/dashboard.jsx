@@ -30,7 +30,7 @@ ChartJS.register(
 const Dashboard = () => {
 
     return (
-        <Box sx={{ paddingRight: '10px', bgcolor: 'background.paper' }}>
+        <Box sx={{ padding: '10px', bgcolor: 'background.paper' }}>
             <Typography sx={{ fontWeight: 'bold', fontSize: '15px', marginBottom: '10px' }}>
                 eCommerce
             </Typography>

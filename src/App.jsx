@@ -47,10 +47,11 @@ function App() {
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <CssBaseline />
       <Box sx={{ display: 'flex' }}>
-        <Box sx={{ width: '20%' }}>
+        <Box sx={{ width: 240, flexShrink: 0 }}> {/* Fixed width for LeftDrawer */}
           <LeftDrawer />
         </Box>
-        <Box component="main" sx={{ flexGrow: 1, width: isOrdersRoute ? '80%' : '60%' }}>
+        <Box component="main" sx={{ flexGrow: 1, width: isOrdersRoute ? '80%' : 'calc(100% - 240px)' }}>
+          {/* Ensure the right panel takes up the remaining width minus the Drawer */}
           <TopBar toggleTheme={toggleTheme} darkMode={darkMode} />
           <Divider />
           <div style={{ marginTop: '20px' }}>
