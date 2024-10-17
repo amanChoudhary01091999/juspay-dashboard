@@ -2,10 +2,12 @@ import React, { useState, useMemo, useCallback } from 'react';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-material.css';
-import { Box, TextField, IconButton, Avatar, Chip, Pagination } from '@mui/material';
+import { Box, TextField, IconButton, Avatar, Chip, Pagination, useTheme } from '@mui/material';
 import { Add, FilterList, SwapVert } from '@mui/icons-material';
 
-const Order = ({ isDarkTheme = true }) => {
+const Order = () => {
+    const theme = useTheme(); // Access the current theme
+    const isDarkTheme = theme.palette.mode === 'dark'; // Check if the theme is dark
     const [gridApi, setGridApi] = useState(null);
     const [gridColumnApi, setGridColumnApi] = useState(null);
     const [currentPage, setCurrentPage] = useState(1);

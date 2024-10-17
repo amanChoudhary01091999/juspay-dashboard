@@ -60,7 +60,7 @@ const LeftDrawer = () => {
                 </ListItem>
 
                 <ListItem sx={{ paddingY: 1 }}>
-                    <Typography style={{ fontSize: '15px', fontWeight: '200', color: grey[500] }} variant="h6">Favourites <span style={{ marginLeft: '20px', color: grey[300] }}>Recently</span></Typography>
+                    <Typography style={{ fontSize: '15px', fontWeight: '200', color: grey[500] }} variant="h6">Favourites <span style={{ marginLeft: '20px', color: grey[200] }}>Recently</span></Typography>
                 </ListItem>
                 <ListItem >
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
@@ -111,7 +111,7 @@ const LeftDrawer = () => {
                 <ListItem onClick={handleProfile}>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         {profile ? <ExpandLess sx={{ fontSize: 20, color: 'grey' }} /> : <ExpandMore sx={{ fontSize: 20, color: 'grey' }} />}
-                        <Person3Icon sx={{ fontSize: 20, color: 'black' }} />
+                        <Person3Icon sx={{ fontSize: 20 }} />
                         <Typography style={{ fontSize: '15px', marginLeft: '5px', fontWeight: '200' }} variant="h6">User Profile</Typography>
                     </div>
                 </ListItem>
@@ -143,28 +143,28 @@ const LeftDrawer = () => {
                 <ListItem>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <ExpandMore sx={{ fontSize: 20, color: 'grey' }} />
-                        <GroupIcon sx={{ fontSize: 20, color: 'black' }} />
+                        <GroupIcon sx={{ fontSize: 20 }} />
                         <Typography style={{ fontSize: '15px', marginLeft: '5px', fontWeight: '200' }} variant="h6">Account</Typography>
                     </div>
                 </ListItem>
                 <ListItem>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <ExpandMore sx={{ fontSize: 20, color: 'grey' }} />
-                        <ContactPageIcon sx={{ fontSize: 20, color: 'black' }} />
+                        <ContactPageIcon sx={{ fontSize: 20 }} />
                         <Typography style={{ fontSize: '15px', marginLeft: '5px', fontWeight: '200' }} variant="h6">Corporate</Typography>
                     </div>
                 </ListItem>
                 <ListItem>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <ExpandMore sx={{ fontSize: 20, color: 'grey' }} />
-                        <BookIcon sx={{ fontSize: 20, color: 'black' }} />
+                        <BookIcon sx={{ fontSize: 20 }} />
                         <Typography style={{ fontSize: '15px', marginLeft: '5px', fontWeight: '200' }} variant="h6">Blog</Typography>
                     </div>
                 </ListItem>
                 <ListItem>
                     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                         <ExpandMore sx={{ fontSize: 20, color: 'grey' }} />
-                        <ChatBubbleOutlineIcon sx={{ fontSize: 20, color: 'black' }} />
+                        <ChatBubbleOutlineIcon sx={{ fontSize: 20 }} />
                         <Typography style={{ fontSize: '15px', marginLeft: '5px', fontWeight: '200' }} variant="h6">Social</Typography>
                     </div>
                 </ListItem>

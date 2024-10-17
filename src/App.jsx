@@ -24,41 +24,11 @@ const darkTheme = createTheme({
   palette: {
     mode: 'dark',
     primary: { main: '#90caf9' },
-    background: { default: 'black', paper: 'black' },
+    background: { default: '#141212', paper: '#141212' },
     text: { primary: '#fff' },
   },
   typography: { fontFamily: '"Roboto", sans-serif' },
-  components: {
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          backgroundColor: 'black',  // Set card background color to black
-          color: '#fff',             // Ensure text is white for readability
-        },
-      },
-    },
-    MuiGrid: {
-      styleOverrides: {
-        root: {
-          backgroundColor: 'black',  // Set grid background color to black
-        },
-      },
-    },
-    MuiBox: {
-      styleOverrides: {
-        root: {
-          backgroundColor: 'black',  // Set box background color to black
-        },
-      },
-    },
-    MuiContainer: {
-      styleOverrides: {
-        root: {
-          backgroundColor: 'black',  // Set container background color to black
-        },
-      },
-    },
-  },
+
 });
 
 
@@ -85,9 +55,9 @@ function App() {
           <Divider />
           <div style={{ marginTop: '20px' }}>
             <Routes>
-              <Route path="/" element={<Dashboard mode={darkMode} />} />
-              <Route path="/dashboard" element={<Dashboard mode={darkMode} />} />
-              <Route path="/orders" element={<Order mode={darkMode} />} />
+              <Route path="/" element={<Dashboard />} />
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/orders" element={<Order />} />
             </Routes>
           </div>
         </Box>

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Grid, Card, Typography, Box } from '@mui/material';
+import { Grid, Card, Typography, Box, useTheme } from '@mui/material';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
-const DashboardCards = ({ mode }) => {
+const DashboardCards = () => {
+    const theme = useTheme(); // Access the current theme
+    const isDarkMode = theme.palette.mode === 'dark'; // Check if the theme is dark
     return (
         <Grid container spacing={4} justifyContent="center" alignItems="flex-start" height={"380px"}>
             <Grid item xs={12} md={6}>
@@ -33,7 +35,7 @@ const DashboardCards = ({ mode }) => {
                 <Card
                     sx={{
                         padding: '30px',
-                        backgroundColor: mode ? '#28282B' : '#F1F3F4',
+                        backgroundColor: isDarkMode ? '#1e1e1e' : '#F1F3F4',
                         borderRadius: '10px',
                     }}
                 >
@@ -57,7 +59,7 @@ const DashboardCards = ({ mode }) => {
                 <Card
                     sx={{
                         padding: '30px',
-                        backgroundColor: mode ? '#28282B' : '#FFF3E0',
+                        backgroundColor: isDarkMode ? '#1e1e1e' : '#FFF3E0',
                         borderRadius: '10px',
                     }}
                 >

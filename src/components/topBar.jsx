@@ -22,7 +22,6 @@ const TopBar = ({ toggleTheme, darkMode }) => {
                 <TextField
                     variant="outlined"
                     size="small"
-
                     placeholder="Search"
                     InputProps={{
                         sx: { borderRadius: '5px', width: '200px', height: '30px', padding: '2px 10px', fontSize: "15px" },

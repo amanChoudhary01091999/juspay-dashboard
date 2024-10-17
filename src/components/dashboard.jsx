@@ -27,34 +27,33 @@ ChartJS.register(
     Legend
 );
 
-const Dashboard = ({ mode }) => {
-    console.log({ mode })
+const Dashboard = () => {
 
     return (
-        <Box sx={{ padding: '20px', bgcolor: 'background.paper' }}>
-            <Typography variant="h6" gutterBottom sx={{ fontWeight: '200', fontSize: '20px' }}>
+        <Box sx={{ paddingRight: '10px', bgcolor: 'background.paper' }}>
+            <Typography sx={{ fontWeight: 'bold', fontSize: '15px', marginBottom: '10px' }}>
                 eCommerce
             </Typography>
 
             <Grid container spacing={2}>
 
                 <Grid item xs={6}>
-                    <DashboardCard mode={mode} />
+                    <DashboardCard />
                 </Grid>
                 <Grid item xs={6}>
-                    <ProjectionsCard mode={mode} />
+                    <ProjectionsCard />
                 </Grid>
                 <Grid item xs={9}>
-                    <RevenueChart mode={mode} />
+                    <RevenueChart />
                 </Grid>
                 <Grid item xs={3}>
-                    <RevenueByLocation mode={mode} />
+                    <RevenueByLocation />
                 </Grid>
                 <Grid item xs={9}>
-                    <TopSellingProducts mode={mode} />
+                    <TopSellingProducts />
                 </Grid>
                 <Grid item xs={3}>
-                    <TotalSales mode={mode} />
+                    <TotalSales />
                 </Grid>
 
             </Grid>
