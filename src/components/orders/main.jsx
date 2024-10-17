@@ -140,7 +140,7 @@ const Order = () => {
         .ag-theme-material-dark .ag-root-wrapper {
             border: 1px solid #3a3a3a;
         }
-    `;
+    `
 
     return (
         <Box sx={{ height: '100%', width: '100%', bgcolor: isDarkTheme ? '#141212' : '#ffffff', padding: '20px' }}>
