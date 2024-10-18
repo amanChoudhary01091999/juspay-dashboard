@@ -43,7 +43,7 @@ To start the development server:
 
    npm run dev
 
-The app should now be running on http://localhost:3000.
+The app should now be running on http://localhost:5173.
 
 ### Routes
 
@@ -67,7 +67,3 @@ If you encounter any issues, feel free to create an issue on this repository.
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-You can just copy and paste this version!
